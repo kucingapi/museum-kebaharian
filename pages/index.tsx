@@ -15,8 +15,8 @@ export default function Home() {
                   scale: 1.7,
                   color: ['#C7DBFF', '#62B6CB', '#FFE999'],
                   transition: { type: 'spring', mass: 1 },
-                }}>
-               
+                }}
+              >
                 {value}
               </motion.h1>
             );
