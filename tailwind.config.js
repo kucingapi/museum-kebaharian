@@ -9,6 +9,22 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
   daisyui: {
-    themes: ['aqua'],
+    themes: [
+      {
+        mytheme: {
+          primary: '#01578F',
+          'primary-content': '#FFFFFF',
+          secondary: '#62B6CB',
+          accent: '#FFE999',
+          neutral: '#3B8BC4',
+          'base-100': '#01578F',
+          'base-content': '#000000',
+          info: '#2463EB',
+          success: '#16A249',
+          warning: '#DB7706',
+          error: '#DC2828',
+        },
+      },
+    ],
   },
 };

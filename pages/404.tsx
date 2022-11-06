@@ -8,9 +8,10 @@ export default function Home() {
       <div className="w-full flex items-center flex-col p-5">
         <img className="w-1/2" src={logo.src} alt="404 not found" />
         <article className="prose flex gap-2 align-baseline max-w-max">
-          {message.map((value) => {
+          {message.map((value, index) => {
             return (
               <motion.h1
+                key={index}
                 whileHover={{
                   scale: 1.7,
                   color: ['#C7DBFF', '#62B6CB', '#FFE999'],
