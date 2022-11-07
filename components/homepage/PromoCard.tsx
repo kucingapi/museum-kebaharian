@@ -5,9 +5,13 @@ export const PromoCard = () => {
   return (
     <motion.article
       whileTap={{
-        borderRadius: '100%',
-        maxWidth: '384px',
-        padding: '56px',
+        borderTopLeftRadius: '100%',
+        borderTopRightRadius: '100%',
+        border: '10px solid #01578F',
+        borderBottomWidth: '0px'
+      }}
+      style={{
+        border: '0px solid #01578F',
       }}
       className="prose absolute bg-slate-100 z-50 p-7 lg:ml-16 lg:translate-x-0 lg:left-0 -translate-x-1/2 left-1/2  bottom-0 rounded-t-3xl max-w-xs "
     >

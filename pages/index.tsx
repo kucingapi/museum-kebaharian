@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
-import HeroSection from '../container/homepage/HeroSection';
+import { HeroSection } from '../container/homepage/HeroSection';
+import { PromotionSection } from '../container/homepage/PromotionSection';
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <HeroSection />
+        <PromotionSection />
       </main>
     </>
   );
