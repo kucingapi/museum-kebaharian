@@ -12,7 +12,7 @@ const HeroSection: FC = () => {
       <motion.div className="overflow-clip max-h-screen relative">
         <PromoCard />
         <motion.img
-          className="min-h-screen"
+          className="min-h-screen object-cover"
           src={buildingImage.src}
           alt="building image"
           style={{

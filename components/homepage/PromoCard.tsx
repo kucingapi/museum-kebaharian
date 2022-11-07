@@ -8,12 +8,10 @@ export const PromoCard = () => {
         borderRadius: '100%',
         maxWidth: '384px',
         padding: '56px',
-
       }}
-      className="prose absolute bg-slate-100 z-50 p-7 ml-16 bottom-0 rounded-t-3xl max-w-xs "
-      // className="prose absolute bg-slate-100 z-50 p-14 ml-16 bottom-0 rounded-full max-w-sm"
+      className="prose absolute bg-slate-100 z-50 p-7 lg:ml-16 lg:translate-x-0 lg:left-0 -translate-x-1/2 left-1/2  bottom-0 rounded-t-3xl max-w-xs "
     >
-      <h2 className='leading-tight'>
+      <h2 className="leading-tight">
         Berpetualang dan Mengeksplor{' '}
         <span className="inline text-neutral">Bahari </span>Bersama
       </h2>
