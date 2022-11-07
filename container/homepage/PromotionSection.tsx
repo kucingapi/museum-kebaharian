@@ -15,6 +15,7 @@ export const PromotionSection: FC = () => {
             rotate: -20,
           }}
           src={bubleGroup.src}
+          alt="museum items"
         />
       </div>
       <article className="prose grow-[7] p-6 text-slate-100 flex flex-col gap-7">

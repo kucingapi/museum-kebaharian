@@ -26,6 +26,7 @@ export const PromoCard = () => {
         borderTopLeftRadius: '50%',
         borderTopRightRadius: '50%',
         border: '7px solid #01578F',
+        borderBottomWidth: '0px',
       }}
       style={{
         border: '0px solid #01578F',

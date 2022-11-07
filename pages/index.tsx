@@ -7,8 +7,13 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>Museum Kebahariaan Jakarta</title>
+        <title>Museum Kebahariaan Jakarta</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Mueseum kebahariaan adalah museum kelatuan yang berada di jakarta. Kami buka dari senin-minggu dengan harga tiket Rp.5000"
+          key="desc"
+        />
       </Head>
       <Navbar />
       <main>
