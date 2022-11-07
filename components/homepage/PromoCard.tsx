@@ -7,8 +7,25 @@ export const PromoCard = () => {
       whileTap={{
         borderTopLeftRadius: '100%',
         borderTopRightRadius: '100%',
-        border: '10px solid #01578F',
-        borderBottomWidth: '0px'
+        border: '15px solid #01578F',
+        borderBottomWidth: '0px',
+      }}
+      onTapStart={() => {
+        window.scrollBy({
+          top: 15,
+          behavior: 'smooth',
+        });
+      }}
+      onHoverStart={() => {
+        window.scrollBy({
+          top: 10,
+          behavior: 'smooth',
+        });
+      }}
+      whileHover={{
+        borderTopLeftRadius: '50%',
+        borderTopRightRadius: '50%',
+        border: '7px solid #01578F',
       }}
       style={{
         border: '0px solid #01578F',
