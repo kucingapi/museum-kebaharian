@@ -9,7 +9,7 @@ const HeroSection: FC = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   return (
     <div>
-      <motion.div className="overflow-clip max-h-screen">
+      <motion.div className="overflow-clip max-h-screen relative">
         <PromoCard />
         <motion.img
           className="min-h-screen"
