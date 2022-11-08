@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import { BuyTicketSection } from '../container/homepage/BuyTicketSection';
+import { EventSection } from '../container/homepage/EventSection';
 import { HeroSection } from '../container/homepage/HeroSection';
+import { ItemsSection } from '../container/homepage/ItemsSection';
 import { PromotionSection } from '../container/homepage/PromotionSection';
 
 export default function Home() {
@@ -21,6 +23,8 @@ export default function Home() {
         <HeroSection />
         <PromotionSection />
         <BuyTicketSection />
+        <ItemsSection />
+        <EventSection />
       </main>
     </>
   );
