@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
+import { Test } from '../components/QrReader';
 import { BuyTicketSection } from '../container/homepage/BuyTicketSection';
 import { EventSection } from '../container/homepage/EventSection';
 import { HeroSection } from '../container/homepage/HeroSection';
@@ -25,6 +26,7 @@ export default function Home() {
         <BuyTicketSection />
         <ItemsSection />
         <EventSection />
+        {/* <Test /> */}
       </main>
     </>
   );
