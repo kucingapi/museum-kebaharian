@@ -20,9 +20,8 @@ export default function FourOFour() {
         >
           {message.map((value, index) => {
             return (
-              <div className="flex justify-center">
+              <div key={index} className="flex justify-center">
                 <motion.h1
-                  key={index}
                   whileHover={{
                     scale: 1.7,
                     color: ['#C7DBFF', '#62B6CB', '#FFE999'],

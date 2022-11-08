@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import React, { FC, useRef } from 'react';
+import { FC } from 'react';
 import { Button } from '../../components/Button';
 import { SectionLayout } from '../../components/SectionLayout';
-import bubleGroup from '../../public/assets/bubble-group.png';
+import bubleGroup from '../../public/assets/bubble-group.webp';
 
 export const PromotionSection: FC = () => {
   return (

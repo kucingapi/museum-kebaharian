@@ -1,8 +1,8 @@
 {
-  "name": "Next.JS Progressive Web App",
-  "short_name": "Next PWA",
+  "name": "Aplikasi Museum Kebaharian",
+  "short_name": "Museum Kebaharian",
   "theme_color": "#ffffff",
-  "background_color": "#004740",
+  "background_color": "#F1F5F9",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",

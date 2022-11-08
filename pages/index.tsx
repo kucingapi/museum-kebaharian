@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
+import { BuyTicketSection } from '../container/homepage/BuyTicketSection';
 import { HeroSection } from '../container/homepage/HeroSection';
 import { PromotionSection } from '../container/homepage/PromotionSection';
 
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <PromotionSection />
+        <BuyTicketSection />
       </main>
     </>
   );
