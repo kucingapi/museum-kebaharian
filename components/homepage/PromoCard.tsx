@@ -39,8 +39,8 @@ export const PromoCard = () => {
         <span className="inline text-neutral">Bahari </span>Bersama
       </h2>
       <h3 className="font-normal leading-tight">
-        Promo <span className="inline text-neutral">20% diskon </span>
-        Setiap pembelian <span className="inline text-neutral">4 tiket </span>
+        Hanya dengan <span className="inline text-neutral"> Rp.5000 </span>
+        bisa sepuasnya menikmati Museum <span className="inline text-neutral"> Bahari</span>
       </h3>
       <Link href="/tiket">
         <Button className="mt-8 w-full">Dapatkan Diskon</Button>
