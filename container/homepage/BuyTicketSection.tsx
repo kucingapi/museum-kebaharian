@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { FC, useRef } from 'react';
 import { Button } from '../../components/Button';
 import { SectionLayout } from '../../components/SectionLayout';
@@ -19,7 +20,11 @@ export const BuyTicketSection: FC = () => {
           berhasil, kode QR akan dikirimkan melalui email Anda. Tunjukkan kode
           QR tersebut dan selamat memulai petualangan Anda di museum!
         </p>
-        <Button className="text-slate-100 md:w-1/2 max-w-full mt-7">Beli Tiket</Button>
+        <Link href="/tiket">
+          <Button className="text-slate-100 md:w-1/2 max-w-full mt-7">
+            Beli Tiket
+          </Button>
+        </Link>
       </article>
       <motion.div
         ref={constraintsRef}

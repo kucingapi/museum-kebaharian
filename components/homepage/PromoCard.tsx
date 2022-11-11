@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from '../Button';
 
 export const PromoCard = () => {
@@ -41,7 +42,9 @@ export const PromoCard = () => {
         Promo <span className="inline text-neutral">20% diskon </span>
         Setiap pembelian <span className="inline text-neutral">4 tiket </span>
       </h3>
-      <Button className="mt-8 w-full">Dapatkan Diskon</Button>
+      <Link href="/tiket">
+        <Button className="mt-8 w-full">Dapatkan Diskon</Button>
+      </Link>
     </motion.article>
   );
 };

@@ -41,7 +41,9 @@ export const PromotionSection: FC = () => {
           placeholder="Link URL"
           className="input input-info w-full "
         />
-        <Button className="bg-slate-100 text-primary hover:bg-white">Kirim</Button>
+        <Button className="bg-slate-100 text-primary hover:bg-white">
+          Kirim
+        </Button>
       </article>
     </SectionLayout>
   );

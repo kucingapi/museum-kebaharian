@@ -5,8 +5,11 @@ import food from '/public/assets/food.webp';
 import mortar from '/public/assets/mortar.webp';
 import boat from '/public/assets/boat.webp';
 import { Button } from '../../components/Button';
+import { useRouter } from 'next/router';
 
 export const ItemsSection = () => {
+  const router = useRouter();
+
   return (
     <SectionLayout className="">
       <div className="flex-col md:flex-row flex w-full">
@@ -53,7 +56,12 @@ export const ItemsSection = () => {
             placeholder="Masukan kode yang tertera pada koleksi museum"
             className="input input-info w-full bg-white text-black rounded-2xl"
           />
-          <Button className="bg-neutral w-fit self-end px-8">
+          <Button
+            onClick={() => {
+              router.push('/item/1');
+            }}
+            className="bg-neutral w-fit self-end px-8"
+          >
             Cek Sejarahnya
           </Button>
         </article>

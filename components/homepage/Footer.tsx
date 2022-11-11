@@ -6,13 +6,16 @@ import Tiktok from 'public/vector/tiktok.svg';
 import Twitter from 'public/vector/twitter.svg';
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export const Footer: FC = () => {
   return (
     <footer className="overflow-clip flex relative md:flex-row flex-col justify-between items-center md:items-end shadow-lg md:pb-8 md:px-8">
       <div className="hidden md:block absolute rounded-full left-0 top-1/2 bg-white -z-10 w-[60vw] h-[60vw] -translate-x-1/4 -translate-y-1/2"></div>
       <div className="md:w-5/12 w-full mx-10 bg-white md:bg-transparent md:px-0 px-9 pt-8">
-        <img className="md:w-5/12 w-8/12" src={logo.src} alt="" />
+        <Link href="/">
+          <img className="md:w-5/12 w-8/12" src={logo.src} alt="" />
+        </Link>
         <article className="prose text-gray-500 mt-4">
           <div className="flex md:flex-row flex-col gap-3 w-fit">
             <PhoneIcon className="w-6" />
