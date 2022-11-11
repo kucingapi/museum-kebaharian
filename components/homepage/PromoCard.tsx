@@ -35,12 +35,12 @@ export const PromoCard = () => {
       className="prose absolute bg-slate-100 z-50 p-7 lg:ml-16 lg:translate-x-0 lg:left-0 -translate-x-1/2 left-1/2  bottom-0 rounded-t-3xl max-w-xs "
     >
       <h2 className="leading-tight">
-        Berpetualang dan Mengeksplor{' '}
-        <span className="inline text-neutral">Bahari </span>Bersama
+        Berpetualang dan Mengeksplor Museum{' '} 
+        <span className="inline text-neutral">Bahari</span>
       </h2>
       <h3 className="font-normal leading-tight">
-        Hanya dengan <span className="inline text-neutral"> Rp.5000 </span>
-        bisa sepuasnya menikmati Museum <span className="inline text-neutral"> Bahari</span>
+        Kini kami telah menghadirkan pemesanan tiket secara 
+        <span className="inline text-neutral"> Online </span>
       </h3>
       <Link href="/tiket">
         <Button className="mt-8 w-full">Dapatkan Diskon</Button>
