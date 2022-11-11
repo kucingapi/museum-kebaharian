@@ -15,14 +15,14 @@ export const EventSection = () => {
             title="Manusia & Bencana"
             date="26 Agustus - 26 Oktober 2022"
             description="Pada pameran Manusia dan Bencana akan memamerkan berbagai macam karya. Salah satuya yaitu puisi-puisi yang lahir akibat rasa kehilanagn yang dirasakan oleh bencana besar yang terjadi. Selain itu juga terdapat foto-foto lukisan bencana karya maestro pelukis ternama yang ada di Indonesia."
-            type="Active"
+            type="Late"
             img={history.src}
           />
           <EventCard
             title="Manusia & Bencana"
             date="26 Agustus - 26 Oktober 2022"
             description="Pada pameran Manusia dan Bencana akan memamerkan berbagai macam karya. Salah satuya yaitu puisi-puisi yang lahir akibat rasa kehilanagn yang dirasakan oleh bencana besar yang terjadi. Selain itu juga terdapat foto-foto lukisan bencana karya maestro pelukis ternama yang ada di Indonesia."
-            type="Coming"
+            type="Late"
             img={drinks.src}
           />
         </div>
