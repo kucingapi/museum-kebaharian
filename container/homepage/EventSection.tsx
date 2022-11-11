@@ -5,7 +5,7 @@ import drinks from '/public/assets/drinks.webp';
 
 export const EventSection = () => {
   return (
-    <SectionLayout className="bg-slate-100 pt-12">
+    <SectionLayout className="bg-slate-100 py-12">
       <article className="prose pl-8">
         <h2>Pameran Spesial</h2>
       </article>

@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.13",
     "@next/font": "^13.0.2",
     "@svgr/webpack": "^6.5.1",
     "@tailwindcss/typography": "^0.5.7",

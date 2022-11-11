@@ -1,16 +1,18 @@
 /* eslint-disable @next/next/no-head-element */
-import { Roboto } from '@next/font/google';
 import { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import '../styles/globals.css';
+import Navbar from '../components/Navbar';
+import { Footer } from '../components/homepage/Footer';
 
-const roboto = Roboto({ weight: ['100', '300', '400', '500', '700', '900'] });
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className={roboto.className}>
+    <>
+      <Navbar />
       <Component {...pageProps} />
       <Analytics />
-    </div>
+      <Footer />
+    </>
   );
 }
 

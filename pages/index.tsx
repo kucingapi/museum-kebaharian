@@ -19,7 +19,6 @@ export default function Home() {
           key="desc"
         />
       </Head>
-      <Navbar />
       <main>
         <HeroSection />
         <PromotionSection />
