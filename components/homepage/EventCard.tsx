@@ -6,10 +6,12 @@ interface eventCard {
   description: String;
   img: String;
   type: 'Sedang_Berlangsung' | 'Akan_Datang' | 'Berakhir';
-  date: String;
+  dateStart: String;
+  dateEnd: String;
 }
 
 export const EventCard: FC<eventCard> = (props) => {
+
   const cardState = () => {
     switch (props.type) {
       case 'Sedang_Berlangsung':
@@ -39,7 +41,6 @@ export const EventCard: FC<eventCard> = (props) => {
     <div className="card lg:card-side bg-slate-50 shadow-xl md:min-w-[950px] min-w-0 w-[80vw]">
       <figure>
         {cardState()}
-
         <img
           className="lg:h-full lg:w-auto w-full h-80 object-cover"
           src={props.img.toString()}
@@ -49,7 +50,9 @@ export const EventCard: FC<eventCard> = (props) => {
       <article className="card-body prose lg:w-1/2">
         <h2 className="card-title">{props.title}</h2>
         <p>{props.description}</p>
-        <p className="mt-auto">{props.date}</p>
+        <p className="mt-auto">
+          {props.dateStart} - {props.dateEnd}
+        </p>
       </article>
     </div>
   );

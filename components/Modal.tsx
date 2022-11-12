@@ -9,7 +9,7 @@ export const Modal: FC<ModalInterface> = (props) => {
   const visible = 'visible opacity-100 pointer-events-auto';
 
   return (
-    <div className={`modal ${props.modal ? visible : ''}`}>
+    <div className={`modal transition-all ${props.modal ? visible : ''}`}>
       <div className="modal-box p">
         {props.children}
         <div className="modal-action">

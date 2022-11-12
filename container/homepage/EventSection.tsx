@@ -23,9 +23,10 @@ export const EventSection: FC<EventStaticProp> = (props) => {
                 key={data.id}
                 title={data.name}
                 description={data.description}
-                date={data.start_date}
+                dateStart={data.start_date}
+                dateEnd={data.expired_date}
                 type="Berakhir"
-                img={history.src}
+                img={data.event_photo.original_url}
               />
             );
           })}

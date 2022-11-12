@@ -16,7 +16,6 @@ import { Item } from '../../api/interface/item/Item';
 export const FormItemSearch: FC = () => {
   const router = useRouter();
   const apiContext = useContext(ApiContext);
-  console.log(apiContext?.items);
   const items = apiContext?.items || [];
 
   const [selected, setSelected] = useState(items[0]);
@@ -51,7 +50,6 @@ interface InputMuseumInterface {
 
 const InputMuseumCode: FC<InputMuseumInterface> = (props) => {
   const apiContext = useContext(ApiContext);
-  console.log(apiContext?.items);
   const items = apiContext?.items || [];
 
   const { selected, setSelected, query, setQuery } = props;

@@ -2,9 +2,6 @@ import { FC, useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { API } from '../../api';
-import axios from 'axios';
-import { axiosInstance } from '../../api/axios';
-import { getDataFromAxios } from '../../functions/getDataFromAxios';
 import { Modal } from '../Modal';
 
 export const FormLink: FC = () => {

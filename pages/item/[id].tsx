@@ -47,18 +47,18 @@ const ItemByCode: FC<ItemStaticProp> = (props) => {
         <div className="flex md:flex-row flex-col gap-5">
           <img
             className="md:w-7/12 w-full object-cover rounded-2xl"
-            src={item.gambar_barang.preview_url}
+            src={item.gambar_barang.original_url}
             alt="boat item"
           />
           <div className="md:w-5/12 w-full flex flex-col gap-4">
             <img
               className="object-cover rounded-2xl"
-              src={item.gambar_barang.preview_url}
+              src={item.gambar_barang.original_url}
               alt="boat item"
             />
             <img
               className="object-cover rounded-2xl"
-              src={item.gambar_barang.preview_url}
+              src={item.gambar_barang.original_url}
               alt="boat item"
             />
           </div>
