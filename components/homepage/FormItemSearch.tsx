@@ -32,7 +32,6 @@ export const FormItemSearch: FC = () => {
       />
       <Button
         onClick={() => {
-          console.log({ query, selected });
           router.push(`item/${selected.kode_barang}`);
         }}
         className="bg-neutral w-fit self-end px-8"

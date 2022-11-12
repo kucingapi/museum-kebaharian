@@ -23,7 +23,7 @@ const index = () => {
           }}
         >
           <Image
-            className="object-cover md:min-w-max  min-w-[150vw] max-w-[200vw]"
+            className="object-cover md:min-w-max min-w-[150vw] max-w-[200vw]"
             fill
             src={tiketBackground.src}
             sizes="200vw"
@@ -31,10 +31,11 @@ const index = () => {
           />
         </motion.div>
       </div>
-      <div className="flex md:flex-row flex-col mt-12 gap-32 justify-between w-full px-9">
+      <div className="flex md:flex-row flex-col-reverse py-12 md:gap-32 justify-between w-full pl-9 text-center md:text-left items-center ">
         <article className="prose max-w-xs md:mb-0 mb-20">
           <h2>
-            Beli <TextNeutral>tiket online</TextNeutral> dan tidak perlu <TextNeutral>antri</TextNeutral> lagi
+            Beli <TextNeutral>tiket online</TextNeutral> dan tidak perlu{' '}
+            <TextNeutral>antri</TextNeutral> lagi
           </h2>
           <p>
             Beli tiket di museum bahari bisa jalan sepuasnya, tidak ada batasan
