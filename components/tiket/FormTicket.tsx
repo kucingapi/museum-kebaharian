@@ -136,7 +136,7 @@ export const FormTicket: FC = () => {
             type="file"
             placeholder=""
             className="w-full h-52 p-4 input input-bordered bg-slate-100 rounded-md"
-            onChange={(event) => {
+            onChange={(event:any) => {
               setPayment(event.currentTarget.files[0]);
             }}
             onBlur={formik.handleBlur}
