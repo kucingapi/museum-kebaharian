@@ -29,10 +29,9 @@ export async function getStaticProps() {
       },
     };
   } catch (error) {
-    return error;
+    return { props: error };
   }
 }
-
 
 const Home: FC<HomeStaticProp> = (props) => {
   // console.log(props.response);

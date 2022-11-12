@@ -6,6 +6,6 @@ export interface Item {
     kode_barang:      string;
     created_at:       Date;
     updated_at:       Date;
-	gambar_barang:	  EventPhoto;
+	gambar_barang:	  EventPhoto[];
     media:            EventPhoto[];
 }

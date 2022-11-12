@@ -15,29 +15,29 @@ interface ItemStaticProp {
   response: Item[];
 }
 
-export async function getStaticProps({ params }: Params) {
+export async function getServerSideProps({ params }: Params) {
   const { id } = params;
   const res = await API.getItemByCode(id);
 
   return {
-    props: { response: res.data.data },
-    revalidate: 86_400,
+    props: { response: res.data.data }
   };
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      // Object variant:
-      { params: { id: 'R001' } },
-    ],
-    fallback: true,
-  };
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       // Object variant:
+//       { params: { id: 'R001' } },
+//     ],
+//     fallback: true,
+//   };
+// }
 
 const ItemByCode: FC<ItemStaticProp> = (props) => {
   const router = useRouter();
   const item = props.response[0];
+  console.log(item);
 
   return (
     <>
@@ -45,18 +45,18 @@ const ItemByCode: FC<ItemStaticProp> = (props) => {
         <div className="flex md:flex-row flex-col gap-5">
           <img
             className="md:w-7/12 w-full object-cover rounded-2xl"
-            src={item.gambar_barang.original_url}
+            src={item.gambar_barang[0].original_url}
             alt="boat item"
           />
           <div className="md:w-5/12 w-full flex flex-col gap-4">
             <img
               className="object-cover rounded-2xl"
-              src={item.gambar_barang.original_url}
+              src={item.gambar_barang[1].original_url}
               alt="boat item"
             />
             <img
               className="object-cover rounded-2xl"
-              src={item.gambar_barang.original_url}
+              src={item.gambar_barang[2].original_url}
               alt="boat item"
             />
           </div>
