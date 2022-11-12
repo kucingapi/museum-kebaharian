@@ -39,11 +39,11 @@ export const PromoCard = () => {
         <span className="inline text-neutral">Bahari</span>
       </h2>
       <h3 className="font-normal leading-tight">
-        Kini kami telah menghadirkan pemesanan tiket secara 
+        Kini kami telah menghadirkan pemesanan tiket secara 
         <span className="inline text-neutral"> Online </span>
       </h3>
       <Link href="/tiket">
-        <Button className="mt-8 w-full">Dapatkan Diskon</Button>
+        <Button className="mt-8 w-full">Beli Tiket</Button>
       </Link>
     </motion.article>
   );

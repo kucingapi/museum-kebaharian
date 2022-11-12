@@ -1,5 +1,7 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
+import { FC } from 'react';
+import { API } from '../api';
+import { Event } from '../api/interface/event/event';
 import { Test } from '../components/QrReader';
 import { BuyTicketSection } from '../container/homepage/BuyTicketSection';
 import { EventSection } from '../container/homepage/EventSection';
@@ -7,7 +9,23 @@ import { HeroSection } from '../container/homepage/HeroSection';
 import { ItemsSection } from '../container/homepage/ItemsSection';
 import { PromotionSection } from '../container/homepage/PromotionSection';
 
-export default function Home() {
+interface HomeStaticProp {
+  response: Event[];
+}
+
+export async function getStaticProps() {
+  const res = await API.getAllEvent();
+
+  return {
+    props: {
+      response: res.data.data,
+    },
+  };
+}
+
+const Home: FC<HomeStaticProp> = (props) => {
+  // console.log(props.response);
+
   return (
     <>
       <Head>
@@ -29,4 +47,5 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+export default Home;

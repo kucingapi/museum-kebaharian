@@ -36,14 +36,18 @@ export const PromotionSection: FC = () => {
           </div>
           <p className="mt-0 text-xs">*untuk 10 orang/bulan</p>
         </div>
-        <input
-          type="text"
-          placeholder="Link URL"
-          className="input input-info w-full "
-        />
-        <Button className="bg-slate-100 text-primary hover:bg-white">
-          Kirim
-        </Button>
+        <form className="flex flex-col gap-7">
+          <input
+            type="text"
+            placeholder="Link URL"
+            className="input input-info w-full "
+          />
+          <button
+            className={`text-base gap-2 normal-case btn font-bold text-primary bg-slate-100 rounded-xl hover:bg-white`}
+          >
+            Kirim
+          </button>
+        </form>
       </article>
     </SectionLayout>
   );
