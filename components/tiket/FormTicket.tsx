@@ -4,7 +4,7 @@ import { Button } from '../Button';
 
 export const FormTicket: FC = () => {
   const { scrollYProgress } = useViewportScroll();
-  const moveY = useTransform(scrollYProgress, [0, 1], [-50, -700]);
+  const moveY = useTransform(scrollYProgress, [0, 1], [-250, -700]);
   return (
     <motion.div
       style={{ translateY: moveY }}

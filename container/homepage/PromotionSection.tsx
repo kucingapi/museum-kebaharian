@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FC } from 'react';
 import { Button } from '../../components/Button';
+import { FormLink } from '../../components/homepage/FormLink';
 import { SectionLayout } from '../../components/SectionLayout';
 import bubleGroup from '../../public/assets/bubble-group.webp';
 
@@ -36,18 +37,7 @@ export const PromotionSection: FC = () => {
           </div>
           <p className="mt-0 text-xs">*untuk 10 orang/bulan</p>
         </div>
-        <form className="flex flex-col gap-7">
-          <input
-            type="text"
-            placeholder="Link URL"
-            className="input input-info w-full "
-          />
-          <button
-            className={`text-base gap-2 normal-case btn font-bold text-primary bg-slate-100 rounded-xl hover:bg-white`}
-          >
-            Kirim
-          </button>
-        </form>
+        <FormLink />
       </article>
     </SectionLayout>
   );
