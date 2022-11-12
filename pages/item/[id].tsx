@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import { FC } from 'react';
 import { API } from '../../api';
 import { Item } from '../../api/interface/item/Item';
-import boat from '/public/assets/phinisi.webp';
 
 interface Params {
   params: id;
@@ -30,12 +29,11 @@ export async function getStaticPaths() {
   return {
     paths: [
       // Object variant:
-      { params: { id: 'pp-01-12' } },
+      { params: { id: 'R001' } },
     ],
     fallback: true,
   };
 }
-
 
 const ItemByCode: FC<ItemStaticProp> = (props) => {
   const router = useRouter();
