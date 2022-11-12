@@ -1,27 +1,38 @@
 import Head from 'next/head';
-import { FC } from 'react';
+import { createContext, FC } from 'react';
 import { API } from '../api';
 import { Event } from '../api/interface/event/event';
+import { Item } from '../api/interface/item/Item';
 import { Test } from '../components/QrReader';
 import { BuyTicketSection } from '../container/homepage/BuyTicketSection';
 import { EventSection } from '../container/homepage/EventSection';
 import { HeroSection } from '../container/homepage/HeroSection';
 import { ItemsSection } from '../container/homepage/ItemsSection';
 import { PromotionSection } from '../container/homepage/PromotionSection';
+import { ApiContext } from '../contexts/ApiContext';
+import { getDataFromAxios } from '../functions/getDataFromAxios';
 
 interface HomeStaticProp {
-  response: Event[];
+  events: Event[];
+  items: Item[];
 }
 
 export async function getStaticProps() {
-  const res = await API.getAllEvent();
+  try {
+    const eventsRes = await API.getAllEvent();
+    const itemsRes = await API.getAllItem();
 
-  return {
-    props: {
-      response: res.data.data,
-    },
-  };
+    return {
+      props: {
+        events: eventsRes.data.data,
+        items: getDataFromAxios<Item[]>(itemsRes),
+      },
+    };
+  } catch (error) {
+    return error;
+  }
 }
+
 
 const Home: FC<HomeStaticProp> = (props) => {
   // console.log(props.response);
@@ -38,11 +49,13 @@ const Home: FC<HomeStaticProp> = (props) => {
         />
       </Head>
       <main>
-        <HeroSection />
-        <PromotionSection />
-        <BuyTicketSection />
-        <ItemsSection />
-        <EventSection response={props.response} />
+        <ApiContext.Provider value={props}>
+          <HeroSection />
+          <PromotionSection />
+          <BuyTicketSection />
+          <ItemsSection />
+          <EventSection response={props.events} />
+        </ApiContext.Provider>
         {/* <Test /> */}
       </main>
     </>

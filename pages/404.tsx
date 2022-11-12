@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
-import logo from '../public/404-error-rafiki.svg';
+import Logo from '../public/404-error-rafiki.svg';
 
 export default function FourOFour() {
   const message = 'Oops Something Went Wrong'.split('');
@@ -11,7 +11,7 @@ export default function FourOFour() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="w-full flex items-center flex-col p-5">
-        <img className="w-1/2" src={logo.src} alt="404 not found" />
+        <Logo />
         <article
           style={{
             gridTemplateColumns: 'repeat(auto-fit, 40px)',

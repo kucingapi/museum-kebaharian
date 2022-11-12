@@ -1,48 +1,76 @@
 import { useRouter } from 'next/router';
+import { FC } from 'react';
+import { API } from '../../api';
+import { Item } from '../../api/interface/item/Item';
 import boat from '/public/assets/phinisi.webp';
 
-const index = () => {
+interface Params {
+  params: id;
+}
+
+interface id {
+  id: string;
+}
+
+interface ItemStaticProp {
+  response: Item[];
+}
+
+export async function getStaticProps({ params }: Params) {
+  const { id } = params;
+  const res = await API.getItemByCode(id);
+
+  return {
+    props: { response: res.data.data },
+    revalidate: 86_400,
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      // Object variant:
+      { params: { id: 'pp-01-12' } },
+    ],
+    fallback: true,
+  };
+}
+
+
+const ItemByCode: FC<ItemStaticProp> = (props) => {
   const router = useRouter();
-  const { id } = router.query;
+  const item = props.response[0];
 
   return (
     <>
       <div className="px-28 py-20">
-        <div className="flex gap-5">
+        <div className="flex md:flex-row flex-col gap-5">
           <img
-            className="w-7/12 object-cover rounded-2xl"
-            src={boat.src}
+            className="md:w-7/12 w-full object-cover rounded-2xl"
+            src={item.gambar_barang.preview_url}
             alt="boat item"
           />
-          <div className="w-5/12 flex flex-col gap-4">
+          <div className="md:w-5/12 w-full flex flex-col gap-4">
             <img
               className="object-cover rounded-2xl"
-              src={boat.src}
+              src={item.gambar_barang.preview_url}
               alt="boat item"
             />
             <img
               className="object-cover rounded-2xl"
-              src={boat.src}
+              src={item.gambar_barang.preview_url}
               alt="boat item"
             />
           </div>
         </div>
       </div>
       <article className="prose bg-slate-100 max-w-full px-28 py-10">
-        <h1 className="mb-0">Kapal Phinisi</h1>
+        <h1 className="mb-0">{item.nama_barang}</h1>
         <div className="divider my-2"></div>
-        <h4 className="font-normal">
-          Perahu phinisi merupakan perahu yang digunakan oleh para nenek moyang
-          dalam menjelajahi luasnya perairan Indonesia. Perahu phinisi yang
-          dibuat memiliki bentuk yang berbeda dengan kapal pada umumnya yaitu
-          karena memiliki bentuk seperti tempurung kelapa yang dipercaya
-          memiliki ketahanan dalam berlayar. Selain itu, dalam pembuatan kapal,
-          nenek moyang kita menggunakan pasak kayu yang dapat membuatnya semakin
-          padat ketika terkena air.
-        </h4>
+        <h4 className="font-normal">{item.deskripsi_barang}</h4>
       </article>
     </>
   );
 };
 
-export default index;
+export default ItemByCode;
