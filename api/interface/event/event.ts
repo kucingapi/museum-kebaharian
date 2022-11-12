@@ -3,7 +3,7 @@ export interface Event {
     id:           number;
     name:         string;
     description:  string;
-    event_type:   string;
+    event_type:   'Sedang_Berlangsung' | 'Akan_Datang' | 'Berakhir';
     start_date:   string;
     expired_date: string;
     created_at:   Date;

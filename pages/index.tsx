@@ -42,7 +42,7 @@ const Home: FC<HomeStaticProp> = (props) => {
         <PromotionSection />
         <BuyTicketSection />
         <ItemsSection />
-        <EventSection />
+        <EventSection response={props.response} />
         {/* <Test /> */}
       </main>
     </>

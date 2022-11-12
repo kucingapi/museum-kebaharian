@@ -5,26 +5,26 @@ interface eventCard {
   title: String;
   description: String;
   img: String;
-  type: 'Active' | 'Coming' | 'Late';
+  type: 'Sedang_Berlangsung' | 'Akan_Datang' | 'Berakhir';
   date: String;
 }
 
 export const EventCard: FC<eventCard> = (props) => {
   const cardState = () => {
     switch (props.type) {
-      case 'Active':
+      case 'Sedang_Berlangsung':
         return (
           <span className="badge badge-success absolute m-6 top-0 left-0 text-slate-50 font-bold">
             Sedang berlangsung
           </span>
         );
-      case 'Coming':
+      case 'Akan_Datang':
         return (
           <span className="badge badge-warning absolute m-6 top-0 left-0 text-slate-50 font-bold">
             Akan Berlangsung
           </span>
         );
-      case 'Late':
+      case 'Berakhir':
         return (
           <span className="badge badge-error absolute m-6 top-0 left-0 text-slate-50 font-bold">
             Sudah Terlewatkan
