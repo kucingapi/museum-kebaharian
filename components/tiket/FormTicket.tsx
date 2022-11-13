@@ -95,7 +95,7 @@ export const FormTicket: FC = () => {
       </Modal>
       <motion.div
         style={{ translateY: moveY }}
-        className="card absolute right-0 rounded-3xl w-full md:w-1/2 bg-white/60 flex flex-col items-center px-16 py-12 backdrop-blur-sm md:mr-9"
+        className="md:top-auto top-[65%] card absolute right-0 rounded-3xl w-full md:w-1/2 bg-white/60 flex flex-col items-center px-16 py-12 backdrop-blur-sm md:mr-9"
       >
         <h1 className="text-3xl font-bold text-primary">Beli Tiket Museum</h1>
         <form
